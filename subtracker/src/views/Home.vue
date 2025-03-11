@@ -4,28 +4,32 @@
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- 月度支出卡片 -->
-      <div class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 shadow-sm">
-        <h3 class="text-lg font-medium text-indigo-800 dark:text-indigo-200 mb-2">月度总支出</h3>
-        <p class="text-3xl font-bold text-indigo-600 dark:text-indigo-300">
-          ¥{{ monthlyTotal.toFixed(2) }}
-        </p>
-      </div>
+      <router-link to="/statistics" class="block">
+        <div class="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-medium text-indigo-800 dark:text-indigo-200 mb-2">月度总支出</h3>
+          <p class="text-3xl font-bold text-indigo-600 dark:text-indigo-300">
+            ¥{{ monthlyTotal.toFixed(2) }}
+          </p>
+        </div>
+      </router-link>
       
-      <!-- 年度支出卡片 -->
-      <div class="bg-green-50 dark:bg-green-900 rounded-lg p-6 shadow-sm">
-        <h3 class="text-lg font-medium text-green-800 dark:text-green-200 mb-2">年度总支出</h3>
-        <p class="text-3xl font-bold text-green-600 dark:text-green-300">
-          ¥{{ yearlyTotal.toFixed(2) }}
-        </p>
-      </div>
+      <router-link to="/statistics" class="block">
+        <div class="bg-green-50 dark:bg-green-900 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-medium text-green-800 dark:text-green-200 mb-2">年度总支出</h3>
+          <p class="text-3xl font-bold text-green-600 dark:text-green-300">
+            ¥{{ yearlyTotal.toFixed(2) }}
+          </p>
+        </div>
+      </router-link>
       
-      <!-- 订阅数量卡片 -->
-      <div class="bg-purple-50 dark:bg-purple-900 rounded-lg p-6 shadow-sm">
-        <h3 class="text-lg font-medium text-purple-800 dark:text-purple-200 mb-2">订阅服务数量</h3>
-        <p class="text-3xl font-bold text-purple-600 dark:text-purple-300">
-          {{ subscriptions.length }}
-        </p>
-      </div>
+      <router-link to="/subscriptions" class="block">
+        <div class="bg-purple-50 dark:bg-purple-900 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-medium text-purple-800 dark:text-purple-200 mb-2">订阅服务数量</h3>
+          <p class="text-3xl font-bold text-purple-600 dark:text-purple-300">
+            {{ subscriptions.length }}
+          </p>
+        </div>
+      </router-link>
     </div>
     
     <!-- 即将到期的订阅 -->
